@@ -1,2 +1,2 @@
-# C-Languge
+# C++ Languge
 C++ Language by Chai aur code
