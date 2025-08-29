@@ -1496,6 +1496,7 @@ int main(){
 // Ingredients: Water tea leaves
 ```
 # Lecture 14
+## Encapsulation 
 ```cpp
 
 ```
