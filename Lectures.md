@@ -285,9 +285,8 @@ int main() {
 
 Q(Nested if-else ) A tea shop offers discounts based on the number of tea cups ordered. write a program that checks the number of cups ordered and applies a discount :*More than 20 cups: 20% discount 
 
-. Between 10 & 20 cups : 10% discount
-
-. Less than 10 cups :No discount
+- Between 10 & 20 cups : 10% discount
+- Less than 10 cups :No discount
 ```cpp
 #include <iostream>
 using namespace std;
