@@ -1550,3 +1550,66 @@ int main(){
 // Deposited: 200
 
 ```
+## Virtual Function
+```cpp
+#include <iostream>
+using namespace std;
+
+class Tea {
+public:
+    virtual void prepareIngredients() = 0; // pure virtual function
+    virtual void brew() = 0; // pure virtual function
+    virtual void serve() = 0; // pure virtual function
+
+    void makeTea() {
+        prepareIngredients();
+        brew();
+        serve();
+    }
+};
+
+// Derived class
+class MasalaTea : public Tea {
+public:
+    void prepareIngredients() override {
+        cout << "Masala leaves and water are ready" << endl;
+    }
+    void brew() override {
+        cout << "Masala Tea brewed" << endl;
+    }
+    void serve() override {
+        cout << "Masala Tea served" << endl;
+    }
+};
+
+class GreenTea : public Tea {
+public:
+    void prepareIngredients() override {
+        cout << "Green leaves and water are ready" << endl;
+    }
+    void brew() override {
+        cout << "Green Tea brewed" << endl;
+    }
+    void serve() override {
+        cout << "Green Tea served" << endl;
+    }
+};
+
+int main() {
+    MasalaTea masalaTea;
+    GreenTea greenTea;
+
+    masalaTea.makeTea();
+    greenTea.makeTea();
+
+    return 0;
+}
+
+// OUTPUT:
+// Masala leaves and water are ready
+// Masala Tea brewed
+// Masala Tea served
+// Green leaves and water are ready
+// Green Tea brewed
+// Green Tea served
+```
