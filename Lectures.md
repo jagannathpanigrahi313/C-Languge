@@ -1497,5 +1497,56 @@ int main(){
 # Lecture 14
 ## Encapsulation 
 ```cpp
+#include <iostream> 
+
+using namespace std;
+
+//Encapsulation start
+class BankAccount{
+    private:
+       string accountNumber;
+       double balance;
+   public:
+      BankAccount(string accNum, double initialBalance ){
+         accountNumber = accNum;
+         balance = initialBalance;
+      }
+
+      //getter
+      double getBalance() const{
+             return balance;
+      }
+
+      //Method to deposit money
+      void deposit(double amount){
+          if(amount > 0){
+            balance += amount;
+            cout << "Deposited: " << amount << endl;
+         }else{
+            cout << "Invalid deposited amount: " << endl;
+         }
+      }
+
+      void withdraw(double amount){
+         if (amount > 0 && amount <= balance){
+            balance -= amount; 
+         }else{
+            cout <<"Invalid withdraw amount "<< endl;
+         }
+      }
+};
+//Encapsulation End
+
+int main(){
+     BankAccount myAccount("9326383288",500);
+
+     myAccount.getBalance();
+     myAccount.deposit(200);//prints () this value
+     myAccount.withdraw(100);
+
+     return 0;
+}
+// OUTPUT:
+// Deposited: 200
 
 ```
