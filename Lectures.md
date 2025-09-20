@@ -1346,7 +1346,8 @@ int main(){
 ```
 friend function is class & function also
 # Lecture 13 - 
-## Getter & Setter
+## Getter & Setter method 
+
 ```cpp
 #include <iostream> 
 #include <vector>
@@ -1442,8 +1443,13 @@ int main(){
 4️⃣ Summary:
 | Function | Purpose                               | Example Use                 |
 | -------- | ------------------------------------- | --------------------------- |
-| Getter   | Read private data safely              | `chai.getTeaName()`         |
+| Getter   | Read(return) private data safely      | `chai.getTeaName()`         |
 | Setter   | Update private data safely with rules | `chai.setTeaName("Masala")` |
+
+
+#🔹 Constructor:
+1) A constructor is a special method in a class that gets called automatically when an object of the class is created.
+2) Its main job is to initialize the object’s data members (variables).
 
 # Deligation constructor
 ```cpp
