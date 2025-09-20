@@ -1713,3 +1713,6 @@ int main(){
 // MasalaTea Destructor called
 // Tea destructor called for Masala Tea
 ```
+<img width="439" height="379" alt="Screenshot 2025-09-20 192919" src="https://github.com/user-attachments/assets/29f8dda6-c5e7-4eb9-985c-55e173598680" />
+
+
