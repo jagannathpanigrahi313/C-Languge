@@ -1620,3 +1620,96 @@ int main() {
 // Green Tea served
 ```
 # Lecture 15
+```cpp
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+//base/main/parent class  
+class Tea{              //in class declaration parenthisis is not allowed
+   protected:
+            string teaName;
+            int Servings;
+   public:
+          Tea(string name, int serve): teaName(name), Servings(serve){
+            cout << "Tea constructor called " << teaName <<endl;
+          }
+          
+          //virtual ---> ham ise change karenge hi karege
+          virtual void brew() const{
+                cout << "Brewing" << teaName << "with generic method" << endl;
+          } 
+          virtual void serve() const{
+                cout << "serving" << Servings << "cup of te with generic method" << endl;
+          }           
+
+          virtual ~Tea(){
+               cout << "Tea destructor called for " << teaName << endl;
+        }
+            
+};
+
+class GreenTea: public Tea {
+     public:
+            GreenTea(int serve) :Tea("Green Tea", serve){
+                cout << "Green tea constructor called" << endl;
+            }
+            void brew() const override {
+                cout << "Brewing " << teaName << "by steeping green te leaves" << endl; 
+            }
+
+            ~GreenTea(){
+                cout << "Green Tea constuctor called" << endl;
+            }
+};
+
+class MasalaTea : public Tea {
+    public:
+        MasalaTea(int serve) :Tea("Masala Tea",serve){
+           cout << "MasalaTea constructor called " << endl;
+        }
+
+        void brew() const override final {  //final is a keyword by which nobody can override it
+            cout << "Brewing " << teaName << "by spices and milk" << endl; 
+        }
+
+        ~MasalaTea(){
+            cout << "MasalaTea Destructor called" << endl;
+        }
+};
+
+int main(){
+    
+    Tea* tea1 = new GreenTea(2);
+    Tea* tea2 = new MasalaTea(3);
+
+    tea1->brew();
+    tea1->serve();
+
+    tea2->brew();
+    tea2->serve();
+
+    delete tea1;
+    delete tea2;
+
+    return 0;
+}
+
+// output:
+// Tea constructor called Green Tea
+// Green tea constructor called
+// Tea constructor called Masala Tea
+// MasalaTea constructor called
+
+// Brewing Green Teaby steeping green te leaves
+// serving2cup of te with generic method
+// Brewing Masala Teaby spices and milk
+// serving3cup of te with generic method
+
+// Green Tea constuctor called
+// Tea destructor called for Green Tea
+// MasalaTea Destructor called
+// Tea destructor called for Masala Tea
+```
