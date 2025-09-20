@@ -424,7 +424,7 @@ int main() {
 // Do you want more tea(yes/no): No
 // Do you want more tea(yes/no): yes
 ```
-Q(For loop) write a program that prints the brewing instructions for making 5 cups of tea.The brewng process should be printed once for each cup using a for loop.
+Q(For loop) write a program that prints the brewing instructions for making 5 cups of tea.The brewing process should be printed once for each cup using a for loop.
 ```cpp
 #include <iostream> 
 #include <string>
@@ -454,7 +454,7 @@ int main() {
 // Outside of the loop
 
 ```
-Q(Break Keyword) Write a program that keeps serving tea until the user says they've had enough (input 'stop'). use a break statement to ext the loop when the user types 'stop'.
+Q(Break Keyword) Write a program that keeps serving tea until the user says they've had enough (input 'stop'). use a break statement to exit the loop when the user types 'stop'.
 ```cpp
 #include <iostream> 
 #include <string>
