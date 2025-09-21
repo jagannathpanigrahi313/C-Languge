@@ -1730,3 +1730,98 @@ Multimap ---> allowing multiple order per customer
 Unordered_map
 Unordered_set
 ctime
+
+
+map --> always in order        undorderedmap-->not in order
+  |--->behind the scene it               |---->behind the scene it uses hash tabel
+       uses binary search tree           |---> hash tabel is a datastructure in which imp thing is  hash function 
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <deque>
+#include <list>
+#include <set>
+#include <map>
+#include <string>
+#include <ctime>
+#include <unordered_set>
+#include <unordered_map>
+
+using namespace std;
+
+struct product{
+    int productID;
+    string name;
+    string category;
+};
+
+struct Order{
+    int orderID;
+    int ProductID;
+    int quantity;
+    string customerID;
+    time_t orderDate;
+};
+
+int main(){
+    vector<product> products = {
+    {101,"laptop","Electronics"},
+    {102,"Smartphone","Electronics"},
+    {103,"Coffe maker","Kitchen"},
+    {104,"Blender","Kitchen"},
+    {105,"Desk Lamp","Home"},
+
+    };
+
+    deque<string> recentCustomers = {"C001","C002","C003","C004"};
+
+    recentCustomers.push_back("C004");
+    recentCustomers.push_front("C004");
+
+    list<Order> orderHistory;
+
+    orderHistory.push_back({1,101,1,"C001",time(0)});
+    orderHistory.push_back({2,102,2,"C002",time(0)});
+    orderHistory.push_back({3,103,1,"C003",time(0)});
+
+    set<string> categories;
+    for(const auto &product: products){
+        categories.insert(product.category);
+    }
+
+    map<int ,int> productStock{
+        {100,10},
+        {102,20},
+        {103,15},
+        {104,4},
+        {105,7},
+    };
+
+    multimap<string,Order> customerOrders;
+    for(const auto &order : orderHistory){
+        customerOrders.insert({order.customerID,order});
+    }
+
+    unordered_map<string , string> customerDate = { 
+        {"C001","jai maa bhavani"},
+        {"C002","jai ho subh ho"},
+        {"C003","jagdambh"},
+        {"C004","sabse sayana"},
+        {"C005","jagath ka nath jagannath"}
+    };
+
+    unordered_set<int> uniqueProductsID;
+
+    for(const auto &product:products){
+        uniqueProductsID.insert(product.productID);
+    }
+
+    // loop lage ke prit kareye
+
+
+   return o;
+}
+```
+
+# Lecture 16
