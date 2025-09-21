@@ -1715,4 +1715,18 @@ int main(){
 ```
 <img width="439" height="379" alt="Screenshot 2025-09-20 192919" src="https://github.com/user-attachments/assets/29f8dda6-c5e7-4eb9-985c-55e173598680" />
 
+# Lecture 16
 
+<img width="1434" height="644" alt="Screenshot 2025-09-21 111942" src="https://github.com/user-attachments/assets/42e4f559-f07b-4983-8858-7a80921c46a2" />
+
+## Online Store 
+
+Vector --> Stores a list of products
+list ---> order
+deque ---> visits 
+set ---> category
+Map ---> Stock count
+Multimap ---> allowing multiple order per customer
+Unordered_map
+Unordered_set
+ctime
