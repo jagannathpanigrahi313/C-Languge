@@ -1825,3 +1825,9 @@ int main(){
 ```
 
 # Lecture 16
+&if first used then --->we are giving address/pointer address 
+&if last used then -->refrence only give/passed jise you have to use
+
+```cpp
+
+```
