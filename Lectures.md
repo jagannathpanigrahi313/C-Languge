@@ -230,6 +230,76 @@ cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 a + b , here a,b are operand & + is operator
 score = 4 , here it is assignment operator
 
+## Tyes of operator
+
+1. Arithmetic Operators
+Used for mathematical calculations.
++ (Addition)
+- (Subtraction)
+* (Multiplication)
+/ (Division)
+% (Modulus → remainder)
+++ (Increment)
+-- (Decrement)
+
+2. Relational (Comparison) Operators
+
+Used to compare two values, results are either true (1) or false (0).
+== (Equal to)
+!= (Not equal to)
+> (Greater than)
+< (Less than)
+>= (Greater than or equal to)
+<= (Less than or equal to)
+
+3. Logical Operators
+
+Used to combine multiple conditions.
+&& (Logical AND)
+|| (Logical OR)
+! (Logical NOT)
+
+4. Bitwise Operators
+
+Work on bits (0s and 1s).
+
+& (Bitwise AND)
+| (Bitwise OR)
+^ (Bitwise XOR)
+~ (Bitwise NOT / complement)
+<< (Left shift)
+>> (Right shift)
+
+5. Assignment Operators
+
+Used to assign values.
+= (Simple assignment)
++= (Add and assign)
+-= (Subtract and assign)
+*= (Multiply and assign)
+/= (Divide and assign)
+%= (Modulus and assign)
+
+6. Conditional / Ternary Operator
+?: → (short form of if-else)
+Example:
+int x = (a > b) ? a : b;  // max value between a and b
+
+7. Type Cast Operators
+Used to convert one data type into another.
+(int), (float), (char) etc.
+Example:
+float x = 5.5;
+int y = (int)x;  // y = 5
+
+8. Special Operators
+sizeof → gives the size of a data type/variable
+, (comma) → separates expressions
+& → address of variable (address operator)
+***** → pointer dereference
+-> → used with pointers to access members of a struct/class
+. (dot) → access members of a struct/class
+
 # Lecture 6 - Statements
 Q (if satement) write a program that checks if the user wants to order Green Tea. if the user types "Green Tea," the program should confirm their order.
 ```cpp
